@@ -1,7 +1,25 @@
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowDown, ArrowUpRight, Layers3, Scissors, Sparkles } from "lucide-react";
+import { CycleMap } from "@/components/interactive-lab";
+
+const routes = [
+  { href: "/carnaval-alem-do-espetaculo", number: "01", title: "A cadeia produtiva", note: "Quem faz o Carnaval acontecer" },
+  { href: "/ods-8-trabalho", number: "02", title: "Trabalho e renda", note: "ODS 8 · Meta 8.3" },
+  { href: "/ods-12-consumo", number: "03", title: "Materiais e escolhas", note: "ODS 12 · Metas 12.5 e 12.8" },
+  { href: "/administracao-na-pratica", number: "04", title: "Administração na prática", note: "Ferramentas que ajudam a agir" },
+];
+
 export default function Home() {
-  return (
-    <main>
-      <div>Hello world!</div>
-    </main>
-  );
+  return <>
+    <section className="home-hero"><div className="hero-texture" aria-hidden="true" /><div className="hero-copy"><p className="eyebrow light">Trabalho, cultura e sustentabilidade no Carnaval</p><h1>Além da<br /><em>Avenida.</em></h1><p className="hero-subtitle">O trabalho que movimenta o Carnaval.<br />Os recursos que podem ganhar uma nova vida.</p><Link className="hero-link" href="/carnaval-alem-do-espetaculo">Entre nos bastidores <ArrowDown size={16} aria-hidden="true" /></Link></div><div className="hero-side-note"><span>UM CARNAVAL</span><span>DE MUITOS CICLOS</span><span className="note-rule" /><span>2026 · MATERIAL EDUCATIVO</span></div><div className="hero-motif" aria-hidden="true"><div className="motif-ring ring-one" /><div className="motif-ring ring-two" /><div className="motif-disc"><Scissors size={42} strokeWidth={1.1} /></div><span className="motif-label">CULTURA<br />EM MOVIMENTO</span></div><div className="hero-index"><span>01</span><span>DEPOIS DA AVENIDA</span></div></section>
+
+    <section className="intro-band content-wrap"><div className="section-index">01 <span>O propósito</span></div><div className="intro-content"><h2>Um desfile não começa<br />nem termina na avenida.</h2><p>Fantasias e adereços são parte visível de uma rede de planejamento, trabalho, fornecedores e materiais. Acompanhar esse percurso abre espaço para perguntas sobre renda, condições de trabalho e o que acontece com os recursos depois do desfile.</p><p>Este portal usa os processos das escolas de samba como contexto para aprender Administração e sustentabilidade, sem presumir que todas produzam ou organizem seus materiais da mesma forma.</p></div><div className="ods-stamps"><Link className="ods-stamp ods-eight" href="/ods-8-trabalho"><Image className="ods-logo" src="/ods8.png" alt="ODS 8: Trabalho decente e crescimento econômico" width={1000} height={1000} sizes="(max-width: 560px) 40vw, 130px" /><span className="ods-goal-meta">Meta 8.3</span><ArrowUpRight size={15} aria-hidden="true" /></Link><Link className="ods-stamp ods-twelve" href="/ods-12-consumo"><Image className="ods-logo" src="/ods12.jpg" alt="ODS 12: Consumo e produção responsáveis" width={380} height={380} sizes="(max-width: 560px) 40vw, 130px" /><span className="ods-goal-meta">Metas 12.5 e 12.8</span><ArrowUpRight size={15} aria-hidden="true" /></Link><span className="ods-caption">Ícones oficiais das Nações Unidas. Este conteúdo não foi aprovado pela ONU e não reflete as opiniões da organização, de seus funcionários ou Estados-membros.</span></div></section>
+
+    <section className="cycle-section"><div className="content-wrap cycle-layout"><div className="cycle-heading"><div className="section-index">02 <span>O ciclo produtivo</span></div><p className="eyebrow">Percorra as etapas</p><h2>Do planejamento<br />ao próximo uso.</h2><p>Selecione uma etapa para ver as decisões que conectam trabalho, materiais e organização.</p><span className="micro-caption"><Layers3 size={15} aria-hidden="true" /> UMA VISÃO EDUCATIVA, NÃO UM FLUXO UNIVERSAL</span></div><CycleMap /></div></section>
+
+    <section className="route-section content-wrap"><div className="route-heading"><div><div className="section-index">03 <span>Explore</span></div><h2>Comece por uma pergunta.</h2></div><p>Conceitos e ferramentas para olhar de perto os bastidores da produção cultural.</p></div><div className="route-list">{routes.map((route) => <Link className="route-row" href={route.href} key={route.href}><span className="route-number">{route.number}</span><span className="route-title">{route.title}</span><span className="route-note">{route.note}</span><ArrowUpRight className="route-arrow" size={20} aria-hidden="true" /></Link>)}</div><Link className="all-topics" href="/aprenda-na-pratica"><Sparkles size={17} aria-hidden="true" /> Experimente as atividades <ArrowUpRight size={15} aria-hidden="true" /></Link></section>
+
+    <section className="academic-note"><div className="content-wrap academic-inner"><span className="academic-label">CONTEXTO<br />ACADÊMICO</span><p>Este portal é um Material Educacional Digital desenvolvido como atividade extensionista da disciplina Ambiente Profissional e de Extensão em Administração II (APEX II), do curso de Administração da Faculdade Unyleya, como parte dos requisitos acadêmicos para aprovação na disciplina.</p><Link href="/sobre-o-projeto" aria-label="Saiba mais sobre o projeto">Conheça o projeto <ArrowUpRight size={15} aria-hidden="true" /></Link></div></section>
+  </>;
 }

@@ -1,0 +1,167 @@
+export type ContentSection = { title: string; text: string; points?: string[] };
+export type PortalPage = { slug: string; navTitle: string; eyebrow: string; title: string; intro: string; learning: string[]; sections: ContentSection[]; reflection: string; references: { label: string; href: string }[]; interaction?: "cycle" | "comparison" | "plan" | "quiz" | "materials" | "glossary" | "video" };
+
+export const references = {
+  ods8: { label: "Nações Unidas Brasil. Objetivo de Desenvolvimento Sustentável 8.", href: "https://brasil.un.org/pt-br/sdgs/8" },
+  ods12: { label: "Nações Unidas Brasil. Objetivo de Desenvolvimento Sustentável 12.", href: "https://brasil.un.org/pt-br/sdgs/12" },
+  pnrs: { label: "Brasil. Lei nº 12.305, de 2 de agosto de 2010. Política Nacional de Resíduos Sólidos.", href: "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm" },
+};
+
+export const bibliography = [
+  { text: "NAÇÕES UNIDAS BRASIL. Objetivo de Desenvolvimento Sustentável 8: trabalho decente e crescimento econômico. Brasília, DF: Nações Unidas Brasil, [s. d.]. Disponível em: https://brasil.un.org/pt-br/sdgs/8. Acesso em: 3 out. 2026.", href: references.ods8.href },
+  { text: "NAÇÕES UNIDAS BRASIL. Objetivo de Desenvolvimento Sustentável 12: consumo e produção responsáveis. Brasília, DF: Nações Unidas Brasil, [s. d.]. Disponível em: https://brasil.un.org/pt-br/sdgs/12. Acesso em: 3 out. 2026.", href: references.ods12.href },
+  { text: "BRASIL. Lei nº 12.305, de 2 de agosto de 2010. Institui a Política Nacional de Resíduos Sólidos; altera a Lei nº 9.605, de 12 de fevereiro de 1998; e dá outras providências. Diário Oficial da União: Brasília, DF, 3 ago. 2010. Disponível em: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm. Acesso em: 3 out. 2026.", href: references.pnrs.href },
+];
+
+export type VideoItem = { title: string; description: string; author: string; source: string; theme: string; videoId: string };
+export const videoCategories = ["ODS 8", "ODS 12", "Economia circular", "Produção cultural", "Gestão de materiais", "Ferramentas administrativas", "Produções do grupo acadêmico"];
+export const videos: VideoItem[] = [];
+
+export const pages: PortalPage[] = [
+  {
+    slug: "carnaval-alem-do-espetaculo", navTitle: "A cadeia produtiva", eyebrow: "01 / Cultura e produção", title: "O Carnaval também acontece nos bastidores.",
+    intro: "Antes da avenida, existe uma cadeia de decisões, saberes e relações de trabalho. Observar esse percurso ajuda a entender como a produção cultural pode movimentar atividades econômicas locais.",
+    learning: ["Reconhecer etapas e participantes de uma cadeia produtiva cultural.", "Relacionar planejamento e compras a oportunidades de trabalho e renda."],
+    sections: [
+      { title: "Uma produção feita por muitas mãos", text: "A preparação de um desfile pode reunir criação artística, planejamento, aquisição de insumos, serviços e montagem. A configuração muda conforme a escola, o território, os recursos disponíveis e o projeto de cada ano.", points: ["Criação e planejamento definem necessidades, cronograma e orçamento.", "Compras e contratação conectam a produção a fornecedores e prestadores de serviço.", "Costura, adereços e montagem combinam técnica, experiência e trabalho artesanal."] },
+      { title: "Economia que se organiza em rede", text: "Costureiras, aderecistas, artesãos, profissionais de montagem e comerciantes são exemplos de participantes possíveis. Esses exemplos ilustram funções, não comprovam que uma escola específica as contrate nem informam quantas pessoas trabalham nesse setor.", points: ["Pequenos negócios podem fornecer materiais ou serviços especializados.", "Prazos e especificações influenciam como o trabalho é distribuído.", "Parcerias locais podem fortalecer capacidades, sem garantir por si só renda estável ou trabalho decente."] },
+      { title: "Ler o processo com a Administração", text: "Mapear entradas, atividades, responsáveis, prazos e saídas permite localizar gargalos e planejar melhor. Um mapa de processo também ajuda a perguntar onde materiais se perdem e como os conhecimentos circulam." },
+    ],
+    reflection: "Que informações seriam necessárias para afirmar que uma produção fortaleceu a economia local? Quem deveria participar dessa análise?", references: [references.ods8], interaction: "cycle",
+  },
+  {
+    slug: "ods-8-trabalho", navTitle: "ODS 8 · Trabalho", eyebrow: "02 / Trabalho e desenvolvimento", title: "Oportunidade econômica precisa vir acompanhada de dignidade.",
+    intro: "O ODS 8 propõe crescimento econômico inclusivo e sustentável, emprego produtivo e trabalho decente. Na produção carnavalesca, a Meta 8.3 oferece uma lente para observar atividades produtivas, empreendedorismo, criatividade e pequenos negócios.",
+    learning: ["Interpretar a Meta 8.3 em um contexto cultural.", "Distinguir trabalho remunerado, voluntariado e condições de trabalho decente."],
+    sections: [
+      { title: "Da atividade produtiva ao desenvolvimento", text: "A Meta 8.3 trata de políticas que apoiem atividades produtivas, geração de emprego decente, empreendedorismo, criatividade e inovação, além de incentivar a formalização e o crescimento de micro, pequenas e médias empresas.", points: ["Uma encomenda de figurinos pode abrir trabalho remunerado para diferentes especialidades.", "Um ateliê pode desenvolver técnicas e relações comerciais ao longo do tempo.", "São exemplos para análise, não resultados medidos sobre escolas de samba."] },
+      { title: "Trabalhos diferentes, perguntas necessárias", text: "Trabalho remunerado envolve pagamento acordado. Voluntariado é uma atividade livre e não remunerada, realizada em benefício de terceiros ou de uma causa. Ocupações temporárias têm duração limitada. Nenhuma dessas categorias, isoladamente, informa se as condições são decentes.", points: ["Há clareza sobre tarefas, jornada, remuneração e prazo?", "O ambiente é seguro e respeita direitos e autonomia?", "As pessoas têm espaço para negociar e reconhecer sua contribuição?"] },
+      { title: "O que observar", text: "Avaliar trabalho decente exige evidências e escuta das pessoas envolvidas. Não basta contar oportunidades: é preciso considerar remuneração, segurança, proteção social, igualdade, voz e estabilidade, conforme o contexto e as normas aplicáveis." },
+    ],
+    reflection: "Como uma contratação pode valorizar um saber artesanal e, ao mesmo tempo, tornar transparentes prazo, escopo e pagamento?", references: [references.ods8],
+  },
+  {
+    slug: "ods-12-consumo", navTitle: "ODS 12 · Materiais", eyebrow: "03 / Produção responsável", title: "Cada material começa com uma decisão de gestão.",
+    intro: "O ODS 12 conecta padrões de produção e consumo. A Meta 12.5 prioriza reduzir a geração de resíduos por prevenção, redução, reciclagem e reuso; a Meta 12.8 destaca informação e conscientização para o desenvolvimento sustentável.",
+    learning: ["Aplicar a hierarquia de gestão de resíduos a materiais de fantasias.", "Reconhecer por que a reciclabilidade depende do material e da infraestrutura disponível."],
+    sections: [
+      { title: "Antes de comprar, planejar", text: "Uma lista de materiais vinculada ao desenho, às medidas e ao cronograma pode ajudar a prever quantidades e sobras. Especificações claras também permitem comparar fornecedores e evitar compras incompatíveis com o uso previsto.", points: ["Conferir inventário e materiais que já podem ser usados.", "Escolher dimensões e acabamentos que facilitem manutenção e desmontagem.", "Prever armazenamento, identificação e destino antes da aquisição."] },
+      { title: "Hierarquia: evitar antes de encaminhar", text: "A Política Nacional de Resíduos Sólidos estabelece a ordem: não geração, redução, reutilização, reciclagem, tratamento e disposição final ambientalmente adequada dos rejeitos. Alternativas concretas dependem do material, da segurança e das condições locais.", points: ["Prevenir: ajustar o projeto para evitar excedentes.", "Reduzir: usar apenas o necessário sem comprometer função e segurança.", "Reutilizar: aproveitar o item novamente sem transformá-lo em outro material.", "Reciclar: transformar o resíduo em insumo, quando houver processo viável."] },
+      { title: "Material composto pede cautela", text: "Tecidos com misturas de fibras, colas, tintas, aviamentos e pedrarias podem dificultar separação e reciclagem. Não se deve classificar um componente como reciclável sem confirmar composição, contaminação, tecnologia e serviço de coleta disponíveis." },
+    ],
+    reflection: "Que informações de composição e destino deveriam acompanhar um material desde a compra?", references: [references.ods12, references.pnrs], interaction: "materials",
+  },
+  {
+    slug: "depois-da-avenida", navTitle: "Depois da avenida", eyebrow: "04 / O ciclo continua", title: "O destino se decide antes do último aplauso.",
+    intro: "O pós-desfile não tem um procedimento único. Recolhimento, triagem, armazenamento, reutilização, reciclagem ou destinação adequada são caminhos possíveis, condicionados ao estado dos itens, à organização e às alternativas locais.",
+    learning: ["Identificar decisões administrativas no pós-uso de fantasias.", "Distinguir caminhos possíveis sem presumir práticas de uma agremiação específica."],
+    sections: [
+      { title: "Organizar o retorno", text: "Uma equipe pode planejar pontos de recolhimento, responsáveis, recipientes e registros. Separar peças inteiras de componentes soltos reduz a mistura e ajuda a decidir o próximo passo com informação.", points: ["Identificar peças, materiais e condição de uso.", "Desmontar apenas quando isso for seguro e fizer sentido.", "Registrar quantidades e local de armazenamento para apoiar decisões futuras."] },
+      { title: "Escolher um caminho compatível", text: "Peças em boas condições podem ser avaliadas para novo uso, reparo ou empréstimo. Componentes podem voltar ao estoque. Resíduos podem ser encaminhados a recicladores quando houver compatibilidade técnica e coleta. O que não tiver alternativa viável precisa de destinação adequada conforme as regras locais.", points: ["Reutilização conserva o item em uso, sem transformá-lo em outro material.", "Reciclagem transforma material em insumo ou produto novo.", "A destinação depende da composição, do estado e da infraestrutura acessível."] },
+      { title: "Administração torna o ciclo visível", text: "Inventário, responsáveis, critérios de triagem, espaço de armazenagem e calendário tornam o fluxo acompanhável. Esses controles não garantem reaproveitamento, mas permitem comparar opções, custos, riscos e necessidades de trabalho." },
+    ],
+    reflection: "Qual dado simples ajudaria a decidir se uma peça deve ser guardada, reparada, desmontada ou encaminhada?", references: [references.ods12, references.pnrs], interaction: "cycle",
+  },
+  {
+    slug: "economia-circular", navTitle: "Economia circular", eyebrow: "05 / Modelos de produção", title: "Manter materiais úteis em circulação exige projeto e coordenação.",
+    intro: "A economia circular procura reduzir desperdícios e conservar o valor de produtos e materiais por mais tempo. Compará-la com o fluxo linear ajuda a visualizar escolhas, sem sugerir que toda iniciativa circular seja automaticamente mais barata ou gere renda.",
+    learning: ["Comparar a lógica linear com estratégias circulares.", "Distinguir reutilização, reciclagem e logística reversa."],
+    sections: [
+      { title: "Do fluxo linear aos ciclos de uso", text: "Um fluxo linear costuma seguir extração, produção, uso e descarte. Uma abordagem circular procura evitar perdas desde o projeto e organizar manutenção, reparo, reuso e, quando necessário e viável, reciclagem.", points: ["Projetar adereços desmontáveis pode facilitar reparo ou troca de componentes.", "Catalogar peças pode apoiar empréstimo, adaptação ou uso em outra produção.", "Essas são possibilidades hipotéticas e dependem de qualidade, demanda, custo e capacidade operacional."] },
+      { title: "Três conceitos que não são sinônimos", text: "Reutilização é aproveitar o item novamente sem transformá-lo. Reciclagem transforma o resíduo em insumo ou produto. Logística reversa organiza o retorno de produtos e resíduos ao setor empresarial para reaproveitamento ou destinação adequada, conforme a definição da Lei nº 12.305/2010." },
+      { title: "Valor precisa ser verificado", text: "Uma alternativa de reaproveitamento pode exigir triagem, limpeza, reparo, transporte e espaço. A Administração pode comparar esses esforços com benefícios ambientais, culturais e econômicos observáveis, em vez de presumir economia ou geração de renda." },
+    ],
+    reflection: "Que critério ajudaria a escolher entre guardar uma peça completa e separar seus componentes?", references: [references.ods12, references.pnrs], interaction: "comparison",
+  },
+  {
+    slug: "administracao-na-pratica", navTitle: "Administração na prática", eyebrow: "06 / Ferramentas de gestão", title: "Planejar recursos também é cuidar do que já existe.",
+    intro: "Ferramentas administrativas ajudam a transformar intenções em rotinas observáveis. Nesta página, gestão de materiais, 5W2H, PDCA e logística reversa aparecem em situações hipotéticas da produção carnavalesca.",
+    learning: ["Relacionar estoque e compras à prevenção de desperdícios.", "Montar um plano 5W2H e compreender o ciclo PDCA."],
+    sections: [
+      { title: "Módulo 1 · Gestão de materiais", text: "Um fluxo simples começa por inventariar o que existe, descrever materiais e condições, definir níveis de acesso e registrar entradas e saídas. O planejamento de compras compara necessidade, especificação, prazo e capacidade de armazenamento.", points: ["Separar material disponível, reservado, danificado e sem identificação.", "Adotar unidades de medida consistentes e responsáveis por atualização.", "Rever excedentes antes de uma nova compra."] },
+      { title: "Módulo 2 · 5W2H", text: "A ferramenta organiza uma ação com sete perguntas: o que será feito (What), por que (Why), onde (Where), quando (When), por quem (Who), como (How) e quanto custa (How much). Ela estrutura um plano, mas não comprova sua viabilidade: prazos, responsabilidades e recursos precisam ser discutidos com as pessoas envolvidas." },
+      { title: "Módulo 3 · PDCA", text: "Planejar define objetivo, método e indicador; Executar testa a ação; Verificar compara evidências com o esperado; Agir corrige, padroniza ou replaneja. Exemplo hipotético: testar etiquetas para localizar sobras e observar se o tempo de busca diminui." },
+      { title: "Módulo 4 · Logística reversa", text: "É um sistema de retorno articulado entre participantes da cadeia. Guardar uma peça para reutilização interna não é, por si só, logística reversa; enviar um material à reciclagem também não descreve automaticamente quem organizou a coleta ou o retorno." },
+    ],
+    reflection: "Que indicador permitiria verificar se um novo controle de estoque está ajudando, sem criar trabalho de registro desproporcional?", references: [references.pnrs], interaction: "plan",
+  },
+  {
+    slug: "estudo-de-caso", navTitle: "Estudo de caso", eyebrow: "07 / Pesquisa extensionista", title: "Conhecer antes de concluir.",
+    intro: "O projeto acadêmico prevê uma investigação presencial sobre relações entre produção carnavalesca, trabalho, geração de renda, gestão de materiais e economia circular. A investigação junto ao GRES Consulado, em Florianópolis (SC), ainda depende de contato e autorização formais.",
+    learning: ["Compreender as etapas de um estudo de caso extensionista.", "Diferenciar metodologia prevista, exemplo hipotético e resultado autorizado."],
+    sections: [
+      { title: "Metodologia prevista", text: "O percurso acadêmico está organizado em etapas que permitem construir conhecimento com cuidado, respeitando consentimento, contexto e limites das evidências.", points: ["1. Pesquisa documental; 2. contato e autorização; 3. visita e diagnóstico; 4. sistematização das informações.", "5. Desenvolvimento do material educativo; 6. apresentação à comunidade; 7. avaliação e revisão.", "A realização de cada etapa deve ser confirmada antes de ser descrita como concluída."] },
+      { title: "Um espaço reservado, não um resultado", text: "Esta página não divulga processos internos, fotografias, depoimentos ou diagnósticos da agremiação. Não há parceria institucional presumida. Após a autorização, informações poderão ser incorporadas com indicação de fonte, contexto, data e limites de uso; até lá, só cabem metodologia e cenários explicitamente hipotéticos." },
+      { title: "Estrutura independente da organização", text: "O roteiro analítico pode ser aplicado a outra escola de samba mediante revisão de consentimento e contexto, sem depender de alterações estruturais no portal. A comparação entre organizações exigiria critérios e evidências compatíveis." },
+    ],
+    reflection: "Como registrar uma observação de campo sem expor pessoas nem transformar uma hipótese em conclusão?", references: [],
+  },
+  {
+    slug: "videoteca", navTitle: "Videoteca", eyebrow: "08 / Aprendizagem audiovisual", title: "Vídeos para assistir com contexto.",
+    intro: "A videoteca está organizada para receber materiais com autoria, fonte, tema e descrição verificáveis. Nenhum vídeo foi incluído sem validação de título, autoria e endereço.",
+    learning: ["Avaliar autoria, fonte e contexto de um recurso audiovisual.", "Relacionar vídeos a temas educativos sem tratar opinião como dado comprovado."],
+    sections: [
+      { title: "Temas previstos", text: "A curadoria pode reunir materiais sobre ODS 8, ODS 12, economia circular, produção cultural, gestão de materiais, ferramentas administrativas e produções do grupo acadêmico. Cada item precisa de verificação antes de publicação." },
+      { title: "Critérios editoriais", text: "Para cada vídeo, o catálogo deve registrar título, descrição, autoria, fonte e tema; quando aplicável, data de publicação e duração. A incorporação de vídeos próprios depende da gravação, autorização de imagem e publicação efetiva pelos integrantes." },
+      { title: "Catálogo em curadoria", text: "Ainda não há links de vídeo verificados fornecidos para esta videoteca. Por isso, nenhum título ou player demonstrativo foi inventado. A estrutura de incorporação está preparada para receber um identificador validado do YouTube." },
+    ],
+    reflection: "Que sinais ajudam a avaliar a confiabilidade e a pertinência educativa de um vídeo?", references: [], interaction: "video",
+  },
+  {
+    slug: "aprenda-na-pratica", navTitle: "Aprenda na prática", eyebrow: "09 / Atividades", title: "Decidir, testar, aprender.",
+    intro: "As atividades usam situações inventadas para praticar conceitos. Não há ranking, coleta de identificação nem envio de respostas; o aprendizado acontece no próprio navegador.",
+    learning: ["Aplicar conceitos dos ODS a situações de produção cultural.", "Justificar escolhas sobre materiais e planejar uma ação simples."],
+    sections: [
+      { title: "Quiz dos ODS", text: "Perguntas curtas conectam trabalho decente, consumo responsável e economia circular. Cada resposta recebe uma explicação para tornar visível o raciocínio, não apenas a pontuação." },
+      { title: "Desafio dos materiais", text: "Em cada cenário hipotético, escolha uma ação coerente com a hierarquia de gestão: prevenir, reutilizar, reciclar quando tecnicamente viável ou encaminhar corretamente o rejeito. A composição do material e a infraestrutura local fazem parte da decisão." },
+      { title: "Meu plano sustentável", text: "Use o 5W2H para descrever um pequeno experimento: uma ação, sua justificativa, local, prazo, responsáveis, método e recurso estimado. O formulário funciona localmente e permite copiar ou imprimir seu plano." },
+    ],
+    reflection: "Qual evidência você precisaria observar depois de executar sua ação?", references: [references.ods8, references.ods12, references.pnrs], interaction: "quiz",
+  },
+  {
+    slug: "glossario", navTitle: "Glossário", eyebrow: "10 / Consulta", title: "Palavras para compreender processos.",
+    intro: "Consulte conceitos usados no portal e veja como se relacionam com a produção carnavalesca. As definições são introdutórias; referências oficiais são indicadas quando pertinentes.",
+    learning: ["Reconhecer conceitos-chave de sustentabilidade e Administração.", "Usar termos próximos sem confundir seus significados."],
+    sections: [{ title: "Busca de conceitos", text: "Digite uma palavra ou expressão. Os exemplos relacionados ao Carnaval são possibilidades didáticas, não relatos de uma organização específica." }],
+    reflection: "Qual conceito você precisaria explicar primeiro para alguém participar de uma decisão sobre materiais?", references: [references.ods8, references.ods12, references.pnrs], interaction: "glossary",
+  },
+  {
+    slug: "biblioteca-e-referencias", navTitle: "Biblioteca e referências", eyebrow: "11 / Fontes", title: "Conhecimento com origem identificável.",
+    intro: "As fontes abaixo sustentam as definições institucionais e legais usadas no portal. A biblioteca distingue documentos oficiais, materiais acadêmicos e conteúdos audiovisuais, para que cada afirmação possa ser conferida.",
+    learning: ["Localizar as fontes oficiais dos ODS 8 e 12.", "Identificar a base legal brasileira usada na hierarquia de gestão de resíduos."],
+    sections: [
+      { title: "Documentos oficiais", text: "Nações Unidas Brasil. Objetivo de Desenvolvimento Sustentável 8: Trabalho decente e crescimento econômico. Disponível na página oficial do ODS 8.", points: ["Nações Unidas Brasil. Objetivo de Desenvolvimento Sustentável 12: Consumo e produção responsáveis.", "Brasil. Lei nº 12.305, de 2 de agosto de 2010. Institui a Política Nacional de Resíduos Sólidos."] },
+      { title: "Publicações acadêmicas", text: "Nenhuma publicação acadêmica específica foi adicionada sem verificação bibliográfica. Novas referências devem incluir autoria, título, periódico ou instituição, ano e endereço persistente, quando houver." },
+      { title: "Materiais complementares e vídeos", text: "A videoteca permanece sem itens até que os links e metadados possam ser verificados. Materiais do grupo serão identificados como produção acadêmica e publicados somente após validação dos créditos e autorizações." },
+    ],
+    reflection: "Ao encontrar um dado quantitativo, você consegue localizar fonte, ano e população ou universo de referência?", references: [references.ods8, references.ods12, references.pnrs],
+  },
+  {
+    slug: "sobre-o-projeto", navTitle: "Sobre o projeto", eyebrow: "12 / Contexto acadêmico", title: "Um material educativo para aprender com os processos.",
+    intro: "Além da Avenida é um Material Educacional Digital sobre trabalho, cultura, economia circular e sustentabilidade no Carnaval, desenvolvido no contexto de uma atividade extensionista em Administração.",
+    learning: ["Conhecer o contexto acadêmico e os objetivos do portal.", "Entender os limites de representação institucional e do estudo de caso."],
+    sections: [
+      { title: "Identificação acadêmica", text: "Este portal é um Material Educacional Digital desenvolvido como atividade extensionista da disciplina Ambiente Profissional e de Extensão em Administração II (APEX II), do curso de Administração da Faculdade Unyleya, como parte dos requisitos acadêmicos para aprovação na disciplina." },
+      { title: "Objetivo e abordagem", text: "O projeto integra o programa extensionista Educando para a Cidadania. Seu objetivo geral é promover conscientização sobre trabalho decente, desenvolvimento econômico local, consumo responsável e economia circular, usando a cadeia produtiva das escolas de samba como contexto de aprendizagem e conhecimentos da Administração como instrumentos de análise.", points: ["Explicar como a preparação do Carnaval pode mobilizar atividades produtivas e oportunidades de trabalho e renda.", "Relacionar produção cultural, empreendedorismo e desenvolvimento econômico comunitário.", "Analisar decisões de aquisição, uso, armazenamento e destinação de materiais.", "Explicar consumo responsável, economia circular, reutilização, reciclagem e logística reversa.", "Aplicar ferramentas administrativas ao planejamento e à melhoria de processos.", "Desenvolver atividades interativas que favoreçam aprendizagem e reflexão.", "Disponibilizar informação educativa em ambiente digital público, acessível e responsivo."] },
+      { title: "Equipe e declaração", text: "Integrantes: Igor Rismo Coelho, Marcelle Nascimento Santos Moraes e Priscilla Porciuncula. Professora orientadora-coordenadora: Ana Shirley de França Moraes. Ano: 2026. O portal possui finalidade educativa e não representa publicação oficial da Faculdade Unyleya, do GRES Consulado ou de qualquer escola de samba. Não utiliza logotipos institucionais." },
+    ],
+    reflection: "Como materiais educativos podem compartilhar conhecimento sem falar em nome das organizações que estudam?", references: [],
+  },
+];
+
+export const glossaryEntries = [
+  { term: "ODS", definition: "Objetivos de Desenvolvimento Sustentável: conjunto de objetivos e metas da Agenda 2030 das Nações Unidas.", example: "O ODS 8 orienta a conversa sobre trabalho e atividade produtiva no Carnaval." },
+  { term: "Economia circular", definition: "Abordagem que busca evitar desperdícios e manter produtos e materiais em uso por mais tempo.", example: "Catalogar e reparar adereços pode ser uma possibilidade de prolongar seu uso." },
+  { term: "Consumo consciente", definition: "Escolha informada que considera necessidade, impactos e consequências do consumo.", example: "Consultar o estoque antes de comprar tecido novo." },
+  { term: "Reutilização", definition: "Aproveitamento de um resíduo ou item sem transformação física, nos termos da PNRS.", example: "Usar novamente uma peça conservada em outra composição." },
+  { term: "Reciclagem", definition: "Transformação de resíduos em insumos ou novos produtos, observadas as condições e normas aplicáveis.", example: "Um tecido só deve ser indicado para reciclagem após verificar composição e serviço disponível." },
+  { term: "Logística reversa", definition: "Ações para viabilizar a coleta e restituição de resíduos ao setor empresarial para reaproveitamento ou destinação adequada.", example: "Um fluxo formal de retorno de embalagens pode ser logística reversa." },
+  { term: "Trabalho decente", definition: "Trabalho produtivo realizado com direitos, proteção, remuneração justa, segurança e possibilidade de diálogo.", example: "Uma encomenda deve ter escopo, prazo, pagamento e condições discutidos." },
+  { term: "Empreendedorismo", definition: "Criação ou desenvolvimento de iniciativas que organizam recursos para oferecer produtos ou serviços.", example: "Um pequeno ateliê pode prestar serviços de costura para produções culturais." },
+  { term: "Cadeia produtiva", definition: "Atividades e participantes conectados na criação, produção, circulação e uso de bens ou serviços.", example: "Do planejamento do figurino à aquisição, confecção e destino pós-desfile." },
+  { term: "Gestão de materiais", definition: "Planejamento e controle da aquisição, armazenamento, movimentação e uso de materiais.", example: "Registrar metragem, localização, condição e reserva de tecidos." },
+  { term: "5W2H", definition: "Ferramenta para estruturar uma ação respondendo o quê, por quê, onde, quando, quem, como e quanto custa.", example: "Planejar um teste de identificação das sobras de materiais." },
+  { term: "PDCA", definition: "Ciclo de melhoria contínua: Planejar, Executar, Verificar e Agir para corrigir ou padronizar uma ação.", example: "Testar etiquetas no estoque, observar os resultados e ajustar o método." },
+];
+
+export const navigation = [{ href: "/", label: "Início" }, ...pages.map(({ slug, navTitle }) => ({ href: `/${slug}`, label: navTitle }))];
