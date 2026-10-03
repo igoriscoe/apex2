@@ -23,3 +23,81 @@
 :root{--green-ink:#17645e;--coral-ink:#a2382d}.eyebrow,.micro-caption,.all-topics,.academic-inner>a,.reference-list a,.copy-message{color:var(--green-ink)}.section-index,.prose-index,.route-number,.academic-label,.cycle-count,.work-path li span,.pdca-loop li>span{color:var(--coral-ink)}.lab-choice:hover,.lab-choice.selected{background:var(--green-ink);border-color:var(--green-ink)}
 .mobile-nav[hidden]{display:none}
 .ods-stamp{align-items:center;justify-content:center;gap:8px;text-align:center}.ods-stamp .ods-logo{display:block;width:min(100%,130px);height:auto;max-height:130px;object-fit:contain}.ods-goal-meta{font-size:10px;font-weight:700;line-height:1.25}.ods-caption{font-size:9px;line-height:1.45;letter-spacing:0;text-align:center;max-width:440px;justify-self:center}.ods-stamp svg{top:9px;right:9px}
+
+/* HOME — FOTOGRAFIA, DEGRADÊ E POSICIONAMENTO */
+.home-hero {
+  position: relative;
+  isolation: isolate;
+  background-color: #12343b;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(18, 52, 59, 0.97) 0%,
+      rgba(18, 52, 59, 0.91) 28%,
+      rgba(18, 52, 59, 0.55) 53%,
+      rgba(18, 52, 59, 0.10) 100%
+    ),
+    url("/images/home-carnaval.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* A fotografia substitui a textura e o desenho circular originais. */
+.home-hero .hero-texture,
+.home-hero .hero-motif {
+  display: none;
+}
+
+/* Evita um segundo degradê sobre a fotografia. */
+.home-hero::after {
+  display: none;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+/* Em telas grandes, aproxima o título da borda esquerda e desloca
+   as informações secundárias para a direita. */
+@media (min-width: 1060px) {
+  .home-hero {
+    padding-left: max(5vw, calc((100vw - 1380px) / 2));
+  }
+
+  .hero-side-note {
+    right: 3%;
+    top: 15%;
+    font-size: 12px;
+    line-height: 1.7;
+    letter-spacing: 0.12em;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+  }
+
+  .hero-index {
+    right: 3%;
+    bottom: 35px;
+    font-size: 11px;
+    line-height: 1.6;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+  }
+
+  .hero-index span:first-child {
+    font-size: 34px;
+  }
+}
+
+/* Maior proteção de contraste quando a fotografia é recortada no celular. */
+@media (max-width: 560px) {
+  .home-hero {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(18, 52, 59, 0.96),
+        rgba(18, 52, 59, 0.78)
+      ),
+      url("/images/home-carnaval.png");
+    background-position: 65% center;
+  }
+}
