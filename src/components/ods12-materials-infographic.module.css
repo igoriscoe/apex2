@@ -1,0 +1,119 @@
+.wrapper {
+  margin-top: 1.75rem;
+  border-top: 2px solid var(--accent-teal);
+  padding-top: 1.4rem;
+  display: grid;
+  gap: 1.4rem;
+}
+
+.header {
+  max-width: 58rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.header p {
+  margin: 0;
+  max-width: 54rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.card {
+  border: 1px solid rgba(5, 58, 66, 0.14);
+  background: rgba(255, 255, 255, 0.54);
+  display: grid;
+  overflow: hidden;
+}
+
+.figure {
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: rgba(5, 58, 66, 0.06);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cardBody {
+  padding: 1rem 1rem 1.1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.cardBody h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.15;
+}
+
+.cardBody p {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.55;
+  color: rgba(4, 36, 42, 0.82);
+}
+
+.note {
+  margin: 0;
+  font-size: 0.88rem;
+  color: rgba(4, 36, 42, 0.72);
+  max-width: 64rem;
+}
+
+.nextBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  border-top: 1px solid rgba(5, 58, 66, 0.16);
+  padding-top: 1rem;
+}
+
+.nextBox p {
+  margin: 0.35rem 0 0;
+  max-width: 44rem;
+}
+
+.nextLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.nextLink:hover {
+  opacity: 0.78;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nextBox {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

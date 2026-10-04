@@ -1,0 +1,141 @@
+
+.section {
+  max-width: 850px;
+  border-top: 2px solid var(--green);
+  border-bottom: 1px solid var(--line);
+  padding: 25px 0 26px;
+  margin: 34px 0 38px;
+}
+
+.heading {
+  max-width: 700px;
+  margin-bottom: 22px;
+}
+
+.heading h2 {
+  margin: 0 0 10px;
+  font: 32px/1.12 var(--serif);
+  color: var(--petrol);
+}
+
+.heading p:last-child {
+  margin: 0;
+  color: #4d5652;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Fotografia alinhada ao topo e à base dos quatro cartões */
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+.figure {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.photo {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Cartões */
+
+.cards {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  gap: 8px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  align-items: start;
+  gap: 11px;
+  padding: 13px 14px;
+  background: #edece5;
+  border: 1px solid #d9d7cf;
+  color: var(--petrol);
+}
+
+.card:nth-child(2) {
+  background: #e3ede8;
+}
+
+.card:nth-child(3) {
+  background: #f3e9de;
+}
+
+.card:nth-child(4) {
+  background: #e7e9de;
+}
+
+.card svg {
+  color: var(--green);
+  margin-top: 2px;
+}
+
+.card h3 {
+  font: 21px/1.1 var(--serif);
+  margin: 0 0 2px;
+}
+
+.card strong {
+  display: block;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #17645e;
+}
+
+.card p {
+  font-size: 12px;
+  line-height: 1.45;
+  margin: 5px 0 0;
+  color: #515b56;
+}
+
+/* Observação */
+
+.caveat {
+  margin: 16px 0 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* Responsividade */
+
+@media (max-width: 680px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .figure {
+    width: min(100%, 310px);
+    min-height: 0;
+    aspect-ratio: 3 / 4;
+    margin: 0 auto;
+  }
+
+  .photo {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .heading h2 {
+    font-size: 27px;
+  }
+}

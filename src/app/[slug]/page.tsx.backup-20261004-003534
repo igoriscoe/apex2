@@ -19,16 +19,6 @@ import styles from "./cadeia-produtiva.module.css";
 
 import { ODS8Infographic } from "@/components/ods8-infographic";
 
-import { ODS12MaterialsInfographic } from "@/components/ods12-materials-infographic";
-
-import { PostCarnivalDecision } from "@/components/pos-desfile";
-
-import { EconomiaFantasia } from "@/components/economia-fantasia";
-
-import { AdminFerramentas } from "@/components/admin-ferramentas";
-
-import { AdminPlano5W2H } from "@/components/admin-plano-5w2h";
-
 export function generateStaticParams() {
   return pages.map(({ slug }) => ({ slug }));
 }
@@ -151,7 +141,6 @@ export default async function TopicPage({
   if (!page) notFound();
 
   const isChainPage = slug === "carnaval-alem-do-espetaculo";
-  const isPostPage = slug === "depois-da-avenida";
   const intro = isChainPage ? chainIntro : page.intro;
   const sections = isChainPage ? chainSections : page.sections;
   const reflection = isChainPage
@@ -208,13 +197,11 @@ export default async function TopicPage({
           ))}
         </div>
 
-        {page.slug === "economia-circular" && <EconomiaFantasia />}
-
-        {isPostPage ? (<PostCarnivalDecision />) : isChainPage ? (
+        {isChainPage ? (
           <ProductionChainDiagram />
         ) : (
           <>
-            {page.slug === "ods-8-trabalho" ? <ODS8Infographic /> : page.slug === "ods-12-consumo" ? (<><ODS12MaterialsInfographic /><EducationalDiagram slug={page.slug} /></>) : <EducationalDiagram slug={page.slug} />}
+            {page.slug === "ods-8-trabalho" ? <ODS8Infographic /> : <EducationalDiagram slug={page.slug} />}
             {page.slug === "aprenda-na-pratica" ? (
               <PracticalActivities />
             ) : (
@@ -223,12 +210,6 @@ export default async function TopicPage({
           </>
         )}
 
-        {page.slug === "administracao-na-pratica" && (
-          <>
-            <AdminFerramentas />
-            <AdminPlano5W2H />
-          </>
-        )}
         <aside className="reflection">
           <span className="eyebrow">Para refletir</span>
           <p>{reflection}</p>

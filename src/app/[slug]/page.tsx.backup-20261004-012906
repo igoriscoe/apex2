@@ -25,10 +25,6 @@ import { PostCarnivalDecision } from "@/components/pos-desfile";
 
 import { EconomiaFantasia } from "@/components/economia-fantasia";
 
-import { AdminFerramentas } from "@/components/admin-ferramentas";
-
-import { AdminPlano5W2H } from "@/components/admin-plano-5w2h";
-
 export function generateStaticParams() {
   return pages.map(({ slug }) => ({ slug }));
 }
@@ -223,12 +219,6 @@ export default async function TopicPage({
           </>
         )}
 
-        {page.slug === "administracao-na-pratica" && (
-          <>
-            <AdminFerramentas />
-            <AdminPlano5W2H />
-          </>
-        )}
         <aside className="reflection">
           <span className="eyebrow">Para refletir</span>
           <p>{reflection}</p>
