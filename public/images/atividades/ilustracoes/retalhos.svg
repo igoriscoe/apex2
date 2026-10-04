@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="455" viewBox="0 0 880 455" role="img" aria-label="Retalhos de tecido dobrados e sobras de corte, desenho vetorial">
+<defs><pattern id="grain" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1" fill="#123b3d" opacity=".06"/></pattern></defs>
+<rect width="880" height="455" fill="#F1E5D8"/><rect width="880" height="455" fill="url(#grain)"/>
+<circle cx="728" cy="90" r="96" fill="#E66D56" opacity=".11"/><circle cx="145" cy="377" r="118" fill="#E66D56" opacity=".10"/>
+
+<rect x="144" y="302" width="598" height="14" rx="7" fill="#15464B" opacity=".22"/>
+<path d="M212 284 311 124 447 208 348 361Z" fill="#0F7675"/><path d="m213 284 97-157 135 83-98 151Z" stroke="#095A5C" stroke-width="5" fill="none"/>
+<path d="m327 321 105-219 149 71-104 219Z" fill="#E8AD43"/><path d="m363 250 148 69M381 214l148 70" stroke="#F8D38B" stroke-width="9"/>
+<path d="m428 296 140-155 120 105-139 155Z" fill="#D96463"/><path d="m428 295 139-154 120 104-138 155Z" stroke="#B7464E" stroke-width="5" fill="none"/>
+<path d="M573 117q36-42 91-17l-27 60Z" fill="#2D8D8D"/><path d="m580 100 51 54M613 91l44 57" stroke="#F4DFB5" stroke-width="5"/>
+<path d="M182 334c35-27 66-24 91 8-39 19-68 22-91-8Z" fill="#EAA947"/>
+<g fill="none" stroke="#123F43" stroke-width="8" stroke-linecap="round"><path d="m151 126 92 94M154 221l85-94"/><circle cx="143" cy="119" r="19"/><circle cx="148" cy="232" r="19"/></g>
+
+</svg>

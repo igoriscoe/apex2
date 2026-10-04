@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="455" viewBox="0 0 880 455" role="img" aria-label="Caixas identificadas e prateleiras de estoque de materiais, ilustração vetorial">
+<defs><pattern id="grain" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1" fill="#123b3d" opacity=".06"/></pattern></defs>
+<rect width="880" height="455" fill="#E1EEE8"/><rect width="880" height="455" fill="url(#grain)"/>
+<circle cx="728" cy="90" r="96" fill="#287E79" opacity=".11"/><circle cx="145" cy="377" r="118" fill="#287E79" opacity=".10"/>
+
+<rect x="154" y="357" width="592" height="16" rx="6" fill="#27544F"/>
+<rect x="164" y="132" width="17" height="226" fill="#245B59"/><rect x="721" y="132" width="17" height="226" fill="#245B59"/>
+<rect x="157" y="241" width="581" height="16" rx="3" fill="#357B73"/><rect x="157" y="130" width="581" height="16" rx="3" fill="#357B73"/>
+<g stroke="#24534E" stroke-width="5"><rect x="206" y="162" width="144" height="79" rx="6" fill="#C48F53"/><rect x="377" y="162" width="140" height="79" rx="6" fill="#E0B975"/><rect x="544" y="162" width="140" height="79" rx="6" fill="#E0A35C"/><rect x="206" y="269" width="144" height="88" rx="6" fill="#D1AA72"/><rect x="377" y="269" width="140" height="88" rx="6" fill="#CF9164"/><rect x="544" y="269" width="140" height="88" rx="6" fill="#D8B577"/></g>
+<g fill="#F5F2DF" stroke="#76958A" stroke-width="3"><rect x="247" y="187" width="62" height="25" rx="3"/><rect x="416" y="187" width="62" height="25" rx="3"/><rect x="585" y="187" width="62" height="25" rx="3"/><rect x="247" y="295" width="62" height="25" rx="3"/><rect x="416" y="295" width="62" height="25" rx="3"/><rect x="585" y="295" width="62" height="25" rx="3"/></g>
+<path d="m261 198 35 0m135 0h35m135 0h35m-375 109h35m135 0h35m135 0h35" stroke="#338B7D" stroke-width="4"/>
+<g transform="translate(85 82)"><circle cx="42" cy="38" r="34" fill="#E8AD49"/><path d="m22 39 14 13 25-28" stroke="#FDF8E5" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+
+</svg>

@@ -1,0 +1,31 @@
+.activities{width:100%;display:grid;gap:2.2rem;margin:1.6rem 0 2rem;color:var(--petrol,#12343b)}
+.intro,.activitySection,.endLink{border-top:2px solid var(--green,#23867b);padding-top:1.2rem}
+.intro h2,.sectionHeader h2,.endLink h2{font:clamp(1.65rem,2.8vw,2.5rem)/1.14 var(--serif,Georgia,serif);margin:.5rem 0;color:var(--petrol,#12343b)}
+.intro p,.sectionHeader p,.endLink p{font-size:1rem;line-height:1.6;max-width:60rem;margin:.35rem 0 1rem}
+.jumpLinks,.actionBank,.controls{display:flex;gap:.65rem;flex-wrap:wrap;align-items:center}
+.jumpLinks a,.dragAction,.controls button,.dropZone button,.nextLink{border:1px solid #168376;padding:.6rem .8rem;background:transparent;color:var(--petrol,#12343b);font:600 .88rem/1.3 inherit;text-decoration:none;cursor:pointer}
+.jumpLinks a:hover,.controls button:hover:not(:disabled),.dropZone button:hover:not(:disabled){background:#e1efea}
+.sectionHeader{margin-bottom:1.25rem;max-width:60rem}
+.actionBank{padding:.75rem;background:#e7e9df;margin-bottom:1rem}
+.dragAction{display:flex;gap:.4rem;align-items:center;background:#fff;cursor:grab}
+.active,.dragAction.active{background:#12343b;color:#fff}
+.pairGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.pairCard{border:1px solid #dedad2;background:#f8f6f0;padding:0 0 .9rem;min-width:0}
+.pairImage{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.pairCard h3{font:1.35rem/1.2 var(--serif,Georgia,serif);margin:.7rem .85rem;color:#12343b}
+.dropZone{margin:.65rem .85rem;display:flex;min-height:66px;gap:.5rem;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:.6rem;border:1px dashed #168376;background:#ecf2ec}
+.dropZone button:disabled,.controls button:disabled{opacity:.5;cursor:not-allowed}
+.fallbackLabel{display:grid;gap:.3rem;margin:.6rem .85rem;font-size:.82rem}
+.fallbackLabel select{width:100%;min-width:0;padding:.5rem;background:#fff;border:1px solid #aaa}
+.correct,.incorrect{font-size:.84rem;margin:.7rem .85rem 0;line-height:1.5;padding:.65rem;background:#e1eee6;border-left:3px solid #14836f}.incorrect{background:#f3e9db;border-left-color:#ce8a42}
+.controls{margin-top:1rem}.controls button{display:inline-flex;align-items:center;gap:.4rem}.controls .primary,.timerIntro .primary{background:#12343b;color:#fff;border:1px solid #12343b}.disclaimer{font-size:.82rem;max-width:60rem;color:#53615b;line-height:1.5}
+.questionPanel,.timerIntro{background:#efeee7;padding:1.2rem;border:1px solid #d9d9d0}.questionPanel h3,.timerIntro h3{font:1.5rem/1.26 var(--serif,Georgia,serif);margin:.8rem 0 1rem}.progress{font-size:.7rem;letter-spacing:.12em;font-weight:700;color:#147669}.choiceList{display:grid;gap:.55rem}.choiceList button{padding:.85rem 1rem;text-align:left;border:1px solid #168376;background:#fff;color:#12343b;cursor:pointer;font-size:.95rem}.choiceList button:hover,.choiceList .chosen{background:#ddede7;border:2px solid #12776b}.feedback{border-left:3px solid #168376;padding:.7rem 1rem;background:#e5ece6;margin-top:1rem}.feedback p{margin:.25rem 0;line-height:1.5}
+.timerIntro{display:grid;justify-items:start;gap:.55rem}.timerIntro p{max-width:54rem;line-height:1.6}.timerIntro fieldset{display:grid;gap:.6rem;border:1px solid #bfc9be;padding:.85rem 1rem;margin:.5rem 0 1rem}.timerIntro label{display:flex;align-items:center;gap:.5rem}.timerIntro button{padding:.7rem 1rem;cursor:pointer}.timerHead{display:flex;gap:1rem;justify-content:space-between;align-items:center}.clock,.urgent{display:flex;align-items:center;gap:.3rem;font-weight:700}.urgent{color:#b74c39}.timerTrack{height:5px;width:100%;background:#c5c9be;margin:.75rem 0}.timerTrack div{height:100%;background:#23867b;transition:width 1s linear}.resultRow{border-top:1px solid #b9c6ba;padding:.7rem 0}.resultRow p{margin:.3rem 0;line-height:1.5}.endLink a{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;color:#126c60;text-decoration:underline}
+@media(max-width:760px){.pairGrid{grid-template-columns:1fr}.questionPanel,.timerIntro{padding:.9rem}.activitySection{scroll-margin-top:70px}}
+
+/* Ilustrações vetoriais compactas da atividade de associação */
+.pairCard { background: #f8f6f0; }
+.pairImage { width: 100%; height: 178px; aspect-ratio: auto; object-fit: cover; object-position: center; background: #eee9df; }
+.pairCard h3 { margin: .6rem .85rem .35rem; }
+.dropZone { min-height: 51px; margin: .4rem .85rem; }
+@media (max-width: 760px) { .pairImage { height: 160px; } }

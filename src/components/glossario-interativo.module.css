@@ -1,0 +1,49 @@
+.section{max-width:850px;border-top:2px solid var(--green,#16877e);border-bottom:1px solid var(--line,#d4d5cb);padding:28px 0;margin:32px 0 38px}
+.heading{margin-bottom:22px;max-width:670px}
+.heading h2{font:clamp(28px,3.5vw,38px)/1.1 var(--serif,Georgia,serif);margin:9px 0 12px;color:var(--petrol,#12343b)}
+.heading p{font-size:15px;line-height:1.6;margin:0}
+.label{display:block;font-weight:700;font-size:13px;margin-bottom:9px}
+.searchBox{display:flex;align-items:center;gap:10px;border:1px solid #809a91;background:#fff;padding:11px 13px;max-width:620px}
+.searchBox svg{flex:none;color:#18786f}
+.searchBox input{background:transparent;width:100%;border:0;outline-offset:5px;color:#173a3e;font:inherit;font-size:15px}
+.categories{display:flex;flex-wrap:wrap;gap:8px;margin:19px 0 14px}
+.filter{padding:9px 12px;border:1px solid #308e85;background:transparent;color:#075e58;font-size:12px;font-weight:600;line-height:1.25;cursor:pointer;transition:background .15s,color .15s}
+.filter:hover{background:#deebe5}
+.active,.active:hover{background:#0c5553;color:#fff}
+.count{font-size:12px;color:#52645f;margin:12px 0}
+.list{border-top:1px solid #c5cbc5}
+.entry{border-bottom:1px solid #c5cbc5}
+.entryHeading{margin:0;font:inherit}
+.expand{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:18px 10px;width:100%;text-align:left;background:transparent;color:#143a3f;border:0;cursor:pointer}
+.expand:hover{background:#e7e9e2}
+.expand svg{flex:none;color:#18786f}
+.termBlock{display:grid;gap:4px}
+.term{font:clamp(19px,2vw,24px)/1.15 var(--serif,Georgia,serif)}
+.categoryLabel{font-size:10px;font-weight:600;line-height:1.3;text-transform:uppercase;letter-spacing:.08em;color:#58766b}
+.details{padding:0 12px 20px 12px;animation:open .2s ease-out}
+.details>p{margin:0 0 14px;font-size:15px;line-height:1.65;max-width:660px}
+.example{display:flex;gap:11px;background:#e7eee9;padding:12px 14px;border-left:3px solid #187d74;max-width:690px}
+.example svg{flex:none;color:#187d74;margin-top:3px}
+.example p{font-size:14px;line-height:1.55;margin:0}
+.related{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:#066660;margin-top:15px;text-decoration:underline;text-underline-offset:4px}
+.empty{padding:26px 12px;font-size:14px}
+.note{font-size:12px;color:#52645f;margin:19px 0 0;line-height:1.5}
+@keyframes open{from{opacity:.25;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:650px){.section{margin:20px 0}.filter{font-size:12px;padding:9px}.expand{padding:16px 5px}}
+@media(prefers-reduced-motion:reduce){.details{animation:none}.filter{transition:none}}
+
+/* Área de resultados: aproximadamente 10 conceitos fechados por vez */
+.list {
+  max-height: 700px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: #258379 #e6e9e1;
+}
+.expand { min-height: 70px; padding-top: 10px; padding-bottom: 10px; }
+.list:focus-visible { outline: 2px solid #258379; outline-offset: 3px; }
+.list::-webkit-scrollbar { width: 9px; }
+.list::-webkit-scrollbar-track { background: #e6e9e1; }
+.list::-webkit-scrollbar-thumb { background: #258379; border-radius: 10px; }
+@media (max-width:650px) { .list { max-height: 560px; } .expand { min-height:70px; padding-top:10px; padding-bottom:10px; } }

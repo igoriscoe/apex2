@@ -1,0 +1,26 @@
+.root { max-width: 860px; display: grid; gap: 36px; padding: 6px 0 20px; }
+.section { border-top: 1px solid var(--line, #c8ccc5); padding-top: 24px; }
+.sectionHeading { display: flex; align-items: center; gap: 12px; margin: 10px 0 15px; color: var(--green, #137d74); }
+.sectionHeading h2 { font-family: var(--serif, Georgia, serif); font-weight: 400; color: var(--petrol, #12343b); font-size: clamp(25px, 3vw, 36px); line-height: 1.15; margin: 0; }
+.section > p { line-height: 1.7; max-width: 720px; margin: 0 0 15px; }
+.aims { list-style: none; padding: 5px 0 0; margin: 0; }
+.aims li { display: grid; grid-template-columns: 42px 1fr; align-items: baseline; padding: 15px 0; border-bottom: 1px solid var(--line, #c8ccc5); gap: 8px; }
+.aims li span { color: #b65c48; font-size: 13px; }
+.aims li p { margin: 0; line-height: 1.6; }
+.resourceGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.resource { display: flex; flex-direction: column; align-items: start; padding: 22px; text-decoration: none; color: var(--petrol, #12343b); border: 1px solid #d7dcd5; background: #eeefe9; min-height: 176px; }
+.resource:nth-child(2) { background: #e1ece8; }
+.resource:nth-child(3) { background: #f2e9df; }
+.resource:nth-child(4) { background: #ece6d5; }
+.resource svg { color: var(--green, #137d74); }
+.resource h3 { font-family: var(--serif, Georgia, serif); font-size: 23px; font-weight: 400; line-height: 1.2; margin: 12px 0 5px; }
+.resource p { color: #405350; margin: 0 0 13px; font-size: 14px; line-height: 1.55; }
+.resource > span { margin-top: auto; font-size: 12px; font-weight: 700; color: #08675f; }
+.resource:hover, .resource:focus-visible { outline: 2px solid #178177; outline-offset: 2px; }
+.credits { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 23px; background: #e6e7df; }
+.credits > div { display: grid; align-content: start; gap: 8px; }
+.credits span { color: #53615c; font-size: 13px; }
+.credits strong { font-weight: 600; line-height: 1.45; }
+.transparency { border-top: 2px solid var(--green, #137d74); }
+.transparency a { color: #08675f; text-underline-offset: 3px; }
+@media (max-width: 660px) { .root { gap: 26px; }.resourceGrid,.credits { grid-template-columns: 1fr; }.resource { min-height: auto; }.sectionHeading h2 { font-size: 26px; } }

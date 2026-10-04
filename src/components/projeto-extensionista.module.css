@@ -1,0 +1,23 @@
+.section { max-width: 850px; margin: 32px 0 34px; padding: 24px 0; border-top: 2px solid var(--green); border-bottom: 1px solid var(--line); }
+.header { max-width: 680px; margin-bottom: 22px; }
+.header h2 { margin: 8px 0 12px; font: clamp(27px, 3.5vw, 38px)/1.13 var(--serif); color: var(--petrol); }
+.header p { margin: 0; line-height: 1.6; }
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.step { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 15px; position: relative; }
+.step:not(:last-child)::before { content: ""; position: absolute; left: 24px; top: 47px; bottom: 0; border-left: 1px dashed #86aaa5; }
+.marker { height: 49px; width: 49px; border: 1px solid #258d81; color: #176f69; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #f7f6f0; z-index: 1; }
+.content { border-bottom: 1px solid var(--line); padding: 0 0 20px; margin-bottom: 20px; }
+.step:last-child .content { margin-bottom: 0; border-bottom: 0; }
+.number { font-size: 11px; color: #a34534; letter-spacing: .09em; }
+.content h3 { margin: 4px 0 6px; font: 23px/1.14 var(--serif); color: var(--petrol); }
+.content p { margin: 0; line-height: 1.6; max-width: 670px; }
+.note { margin: 20px 0 0; color: #616762; font-size: 12px; line-height: 1.5; }
+.practice { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; padding: 22px; margin-top: 25px; background: #e6ebe5; border-left: 3px solid #218778; }
+.practice h3 { margin: 9px 0; font: 25px/1.15 var(--serif); color: var(--petrol); }
+.practice p, .practice li { font-size: 14px; line-height: 1.6; }
+.practice p { margin: 0; }
+.practice ol { margin: 0; padding-left: 21px; display: grid; gap: 8px; }
+.ethics { display: grid; grid-template-columns: 32px 1fr; gap: 12px; padding: 20px 0 0; color: #166f68; }
+.ethics h3 { color: var(--petrol); font: 23px/1.2 var(--serif); margin: 0 0 6px; }
+.ethics p { margin: 0; color: #394c47; font-size: 14px; line-height: 1.6; }
+@media (max-width: 650px) { .step { grid-template-columns: 44px minmax(0, 1fr); gap: 10px; } .marker { width: 39px; height: 39px; } .step:not(:last-child)::before { left: 19px; top: 39px; } .practice { grid-template-columns: 1fr; padding: 18px; } }

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="455" viewBox="0 0 880 455" role="img" aria-label="Mãos confeccionando uma fantasia e detalhes de costura, ilustração vetorial">
+<defs><pattern id="grain" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1" fill="#123b3d" opacity=".06"/></pattern></defs>
+<rect width="880" height="455" fill="#E5EAEF"/><rect width="880" height="455" fill="url(#grain)"/>
+<circle cx="728" cy="90" r="96" fill="#CB7562" opacity=".11"/><circle cx="145" cy="377" r="118" fill="#CB7562" opacity=".10"/>
+
+<path d="M195 309c41-45 101-69 179-73l48 104c-70 48-143 54-227-31Z" fill="#B86851"/><path d="M685 312c-41-45-102-69-178-73l-49 104c72 48 141 53 227-31Z" fill="#B86851"/>
+<path d="m283 256 92-75 92 50-40 89-112 31Z" fill="#0F7774"/><path d="m598 256-92-75-92 50 40 89 112 31Z" fill="#E6B446"/>
+<path d="M426 181c11-38 41-65 70-65 42 0 59 34 34 72-25 24-59 29-104-7Z" fill="#F3C092"/>
+<path d="m452 200 65-51M393 200l-58-76" stroke="#F1E4C7" stroke-width="6" stroke-dasharray="9 12"/>
+<path d="M336 114c55-57 144-52 184 22" fill="none" stroke="#1A625D" stroke-width="7" stroke-linecap="round"/>
+<g transform="translate(638 69)" fill="none" stroke="#216260" stroke-width="9" stroke-linecap="round"><path d="m-7 13 36 52m0-52L-7 65"/><circle cx="-9" cy="7" r="14"/><circle cx="30" cy="8" r="14"/></g>
+<path d="M209 350q210 56 470 0" stroke="#E8AE4B" stroke-width="7" stroke-dasharray="12 10" fill="none"/>
+
+</svg>

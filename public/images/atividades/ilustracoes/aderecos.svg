@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="455" viewBox="0 0 880 455" role="img" aria-label="Adereços e pedrarias desmontáveis organizados para triagem, ilustração vetorial">
+<defs><pattern id="grain" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1" fill="#123b3d" opacity=".06"/></pattern></defs>
+<rect width="880" height="455" fill="#E7E6D4"/><rect width="880" height="455" fill="url(#grain)"/>
+<circle cx="728" cy="90" r="96" fill="#BD8C30" opacity=".11"/><circle cx="145" cy="377" r="118" fill="#BD8C30" opacity=".10"/>
+
+<g transform="translate(205 92)">
+ <rect width="472" height="284" rx="25" fill="#FDF9EE" stroke="#245E5A" stroke-width="10"/>
+ <path d="M236 0v284M0 139h472" stroke="#245E5A" stroke-width="10"/>
+ <circle cx="118" cy="67" r="41" fill="#D9655B"/><circle cx="118" cy="67" r="22" fill="#F5D287"/>
+ <path d="m349 19 38 49-38 47-37-47Z" fill="#2F8B87"/><path d="m349 34 24 34-24 33-24-33Z" fill="#CAE4DC"/>
+ <g fill="#DDAA43"><circle cx="48" cy="188" r="18"/><circle cx="96" cy="215" r="18"/><circle cx="145" cy="184" r="18"/><circle cx="185" cy="216" r="18"/></g>
+ <g fill="#CE645F"><path d="m302 180 28-24 26 24-26 27Z"/><path d="m381 193 28-25 28 25-28 28Z"/><path d="m341 239 26-25 28 25-28 24Z"/></g>
+</g>
+<path d="M157 79c64 13 106 44 128 88M700 85c-56 10-85 27-100 61" stroke="#CD9D3B" stroke-width="7" fill="none" stroke-linecap="round" stroke-dasharray="6 16"/>
+
+</svg>
