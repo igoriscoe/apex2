@@ -101,3 +101,45 @@
     background-position: 65% center;
   }
 }
+/* Limpeza visual da página inicial */
+
+.home-hero .hero-side-note,
+.home-hero .hero-index {
+  display: none;
+}
+/* Controle discreto da órbita */
+
+.orbit-controls {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0 18px;
+}
+
+.orbit-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  color: var(--green-ink);
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.orbit-toggle:hover {
+  color: var(--petrol);
+  background: rgba(35, 134, 123, 0.12);
+}
+
+.orbit-toggle:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+.orbit-toggle:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
