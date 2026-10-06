@@ -113,9 +113,7 @@ export default function Home() {
             <ArrowUpRight size={15} aria-hidden="true" />
           </Link>
           <span className="ods-caption">
-            Ícones oficiais das Nações Unidas. Este conteúdo não foi aprovado
-            pela ONU e não reflete as opiniões da organização, de seus
-            funcionários ou Estados-membros.
+            Ícones oficiais das Nações Unidas.
           </span>
         </div>
       </section>

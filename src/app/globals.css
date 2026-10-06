@@ -263,3 +263,26 @@
     padding-bottom: 55px;
   }
 }
+/* HOME — Ajuste da fotografia para celulares */
+
+@media (max-width: 560px) {
+  .home-hero {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(18, 52, 59, 0.97) 0%,
+        rgba(18, 52, 59, 0.88) 38%,
+        rgba(18, 52, 59, 0.30) 100%
+      ),
+      url("/images/home-carnaval.png");
+
+    background-size: cover;
+    background-position: 70% center;
+    background-repeat: no-repeat;
+  }
+
+  .hero-copy {
+    position: relative;
+    z-index: 2;
+  }
+}
